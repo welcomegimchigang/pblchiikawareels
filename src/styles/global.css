@@ -1,0 +1,75 @@
+:root {
+  --bg: #ffe4ec;
+  --bg-2: #fff1f5;
+  --card: #ffffff;
+  --ink: #3a2b33;
+  --muted: #9a7f8a;
+  --pink: #ff8fab;
+  --pink-deep: #ff5c8a;
+  --pink-soft: #ffc2d1;
+  --yellow: #ffe08a;
+  --line: #3a2b33;
+  --radius: 22px;
+  --font-hand: 'Gaegu', 'Hi Melody', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-hand);
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior-y: none;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 20% 10%, #fff8fa 0, transparent 40%),
+    radial-gradient(circle at 80% 90%, #ffd6e2 0, transparent 45%);
+  min-height: 100dvh;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+a {
+  color: var(--pink-deep);
+}
+
+.phone {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+  position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/characterimage.tsx","./src/hooks/useholdgauge.ts","./src/lib/payload.ts","./src/pages/createpage.tsx","./src/pages/receiverpage.tsx"],"version":"5.9.3"}

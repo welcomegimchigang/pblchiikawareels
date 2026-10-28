@@ -1,0 +1,210 @@
+.root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.sub {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr 320px;
+    align-items: start;
+  }
+}
+
+.form {
+  background: #fff;
+  border: 3px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 5px 5px 0 var(--line);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 19px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.label small {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.form input,
+.result input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-2);
+  outline: none;
+}
+
+.form input:focus,
+.result input:focus {
+  border-color: var(--pink-deep);
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.num {
+  width: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.iconBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.addBtn {
+  align-self: flex-start;
+  margin-left: 32px;
+  padding: 6px 12px;
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.primary {
+  padding: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  border: 3px solid var(--line);
+  border-radius: 999px;
+  background: var(--pink);
+  color: #fff;
+  box-shadow: 0 5px 0 var(--line);
+  cursor: pointer;
+}
+
+.primary:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: var(--bg);
+  border-radius: 14px;
+}
+
+.result input {
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.secondary {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.secondary:active {
+  background: var(--pink-soft);
+}
+
+/* ---------- 미리보기 ---------- */
+.previewSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.previewHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previewFrame {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border: 3px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: 5px 5px 0 var(--line);
+  position: relative;
+}
+
+.previewScale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left; /* scale 값은 CreatePage.tsx에서 계산 */
+}
